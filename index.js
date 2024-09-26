@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.body.style.zoom="80%"
 
-  footerText.innerHTML = `Made by <span style="color: #737373">Mick Manuit ${new Date().getFullYear()}`;
+  footerText.innerHTML = `Made by <span style="color: #737373">Mick Manuit &copy;${new Date().getFullYear()}`;
 
   // Event delegation for viewing resume
   // const resumeBtn = document.querySelector(".resume-btn");
