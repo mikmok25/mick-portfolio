@@ -16,15 +16,37 @@
     <div class="container">
       <nav class="navbar">
         <h1><a href="#" class="colored-name">DevWithMick</a></h1>
+        <div style="display: flex; align-items: center">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+          </ul>
 
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact-section">Contact</a></li>
-        </ul>
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon" id="theme-icon"></i>
+            <span id="theme-text">Dark</span>
+          </button>
+
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <i class="fas fa-bars" id="mobile-menu-icon"></i>
+          </button>
+        </div>
+        <div class="mobile-nav" id="mobile-nav">
+          <ul>
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#contact-section" class="mobile-nav-link">Contact</a></li>
+          </ul>
+        </div>
+
       </nav>
     </div>
+
+
+
   </header>
 
   <main class="main-section" id="home">
@@ -33,7 +55,7 @@
         <div class="hero-container">
           <div class="hero-flex-row">
             <div class="info-container">
-              <h2>👋 Hello, I'm <span class="colored-name">Mick</span></h2>
+              <h2> <span class="wave-emoji">👋</span> Hello, I'm <span class="colored-name">Mick</span></h2>
               <p>
                 I'm, a aspiring dedicated full stack web developer with a passion for crafting digital
                 solutions that bring ideas to life.
@@ -109,7 +131,8 @@
               <h2 class="project-title">CCCapital</h2>
               <p>A movie booking app built with MERN Stack</p>
               <div class="project-icons">
-                <a href="https://astonishing-biscochitos-b7bee2.netlify.app/#hero-section"><i class="fa-solid fa-globe"></i></a>
+                <a href="https://astonishing-biscochitos-b7bee2.netlify.app/#hero-section"><i
+                    class="fa-solid fa-globe"></i></a>
                 <a href="https://github.com/mikmok25/mortgage-website"><i class="fa-brands fa-github"></i></a>
               </div>
             </div>
@@ -255,8 +278,7 @@
             <h2 class="project-title">CCCapital Website</h2>
             <p>UI design for real estate agents.</p>
             <div class="project-icons">
-              <a
-                href="https://www.figma.com/design/xK4mkW4hhlfaY758nkhy7s/CCCapital?node-id=0-1&t=vWmWDXh11KZwxGXr-1"><i
+              <a href="https://www.figma.com/design/xK4mkW4hhlfaY758nkhy7s/CCCapital?node-id=0-1&t=vWmWDXh11KZwxGXr-1"><i
                   class="fa-solid fa-globe"></i></a>
             </div>
           </div>
