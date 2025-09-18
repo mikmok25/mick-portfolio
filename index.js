@@ -91,11 +91,53 @@ document.addEventListener("DOMContentLoaded", () => {
   const footerText = document.querySelector(".footer-text");
 
   const contactForm = document.querySelector(".contact-form");
+  const submitBtn = document.querySelector(".submit-btn");
+  const formStatus = document.getElementById("form-status");
+  const loadingMessage = document.getElementById("loading-message");
+  const successMessage = document.getElementById("success-message");
+  const errorMessage = document.getElementById("error-message");
   if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
+    contactForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-      // Add your form submission logic here
-      alert("Thank you for your message! I'll get back to you soon.");
+
+      formStatus.style.display = "block";
+      loadingMessage.style.display = "block";
+      successMessage.style.display = "none";
+      errorMessage.style.display = "none";
+      submitBtn.disabled = true;
+
+      const formData = new FormData(contactForm);
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (response.ok) {
+          loadingMessage.style.display = "none";
+          successMessage.style.display = "block";
+          contactForm.reset();
+
+          setTimeout(() => {
+            formStatus.style.display = "none";
+          }, 5000);
+        } else {
+          throw new Error("Form Submission failed");
+        }
+      } catch (error) {
+        loadingMessage.style.display = "none";
+        errorMessage.style.display = "block";
+
+        setTimeout(() => {
+          formStatus.style.display = "none";
+        }, 5000);
+      } finally {
+        submitBtn.disabled = false;
+      }
     });
   }
   document.body.style.zoom = "80%";

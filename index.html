@@ -303,7 +303,7 @@
             <h4>manuitmicknixon25@gmail.com</h4>
           </div>
           <div class="right-section">
-            <form class="contact-form">
+        <form class="contact-form" action="https://formspree.io/f/mrbawndv" method="POST">
               <div class="contact-text">
                 <h2>Contact Form</h2>
                 This is a working functional contact form where I can receive
@@ -326,6 +326,18 @@
                 Submit Now
                 <img src="./img/north_east_button.svg" alt="right icon" class="right-icon" />
               </button>
+
+              <div class="form-status" id="form-status" style="display: none;">
+                <div class="loading-message" id="loading-message" style="display:none">
+                  <i class="fas fa-spinner fa-spin"></i> Sending your message
+                </div>
+                <div class="success-message" id="success-message" style="display: none">
+                  <i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully.
+                </div>
+                <div class="error-message" id="error-message" style="display: none">
+                  <i class="fas fa-exclamation-circle"></i> Sorry there was an error sending your message.
+                </div>
+              </div>
             </form>
           </div>
         </div>
